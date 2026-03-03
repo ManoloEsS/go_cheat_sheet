@@ -298,3 +298,16 @@ func Map[T any, U any](s []T, f func(T) U) []U {
 nums := []int{1, 2, 3}
 doubled := Map(nums, func(x int) int { return x * 2 })
 ```
+
+## Strings Builder
+```go
+import "strings"
+
+var b strings.Builder // the builder
+
+b.WriteByte('a') //use for byte and not caring about UTF-8
+b.WriteRune('b') //use for UTF-8
+b.WriteString("hello") //use for full string, no matter length
+
+return b.String()//returns the string abhello
+```
